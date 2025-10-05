@@ -1,9 +1,12 @@
 platform :ios, '12.0'
 
-# Prevent Cocoapods from embedding multiple copies of the same library
 use_frameworks!
 use_modular_headers!
+
+require File.join(File.dirname(__FILE__), '..', 'Flutter', 'packages', 'flutter_tools', 'bin', 'podhelper.rb')
 
 target 'Runner' do
   flutter_install_all_ios_pods File.dirname(File.realpath(__FILE__))
 end
+
+
