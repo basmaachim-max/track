@@ -1,0 +1,55 @@
+name: sales_track
+description: "Sales tracking app"
+publish_to: 'none'
+
+version: 1.0.0+1
+
+environment:
+  sdk: ">=3.9.0 <4.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  # Firebase
+  firebase_core: ^4.1.1
+  firebase_auth: ^6.1.0
+  cloud_firestore: ^6.0.2
+
+  # واجهة وأيقونات
+  cupertino_icons: ^1.0.8
+  intl: ^0.20.2
+  #dropdown_button2: ^2.3.9
+  #dropdown_button2: ^5.1.0
+  dropdown_button2: ^2.3.9
+  firebase_storage: ^13.0.2
+  file_picker: ^10.3.3
+  shared_preferences: ^2.2.2
+  firebase_messaging: ^16.0.2
+
+  # الخرائط
+  google_maps_flutter: ^2.9.0
+  flutter_map: ^8.2.2
+  latlong2: ^0.9.1
+
+  # الموقع
+  geolocator: ^14.0.2
+  geocoding: ^4.0.0
+  location: ^8.0.1
+  permission_handler: ^12.0.1
+  flutter_background: ^1.3.0+1
+  # الاتصال بالإنترنت
+  connectivity_plus: ^7.0.0
+
+  # تخزين محلي
+  hive: ^2.2.3
+  hive_flutter: ^1.1.0
+  path_provider: ^2.1.3
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^6.0.0
+
+flutter:
+  uses-material-design: true
