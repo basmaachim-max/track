@@ -1,25 +1,15 @@
-# Uncomment this line to define a global platform for your project
 platform :ios, '13.0'
-
-# CocoaPods analytics disabled for CI/CD safety
-ENV['COCOAPODS_DISABLE_STATS'] = 'true'
 
 # ignore all warnings from all pods
 inhibit_all_warnings!
 
-use_frameworks!
-use_modular_headers!
+flutter_application_path = '../'
+load File.join(flutter_application_path, '.flutter-plugins-dependencies')
 
 target 'Runner' do
-  # Flutter Pod helper
-  flutter_install_ios_engine_pod
-  flutter_ios_podfile_setup
+  use_frameworks!
+  use_modular_headers!
 
-  # Install all Flutter plugins
-  flutter_application_path = File.expand_path('..', __dir__)
-  eval(File.read(File.join(flutter_application_path, '.flutter-plugins-dependencies')), binding)
+  flutter_install_all_ios_pods File.dirname(File.realpath(__FILE__))
 end
-
-post_install do |installer|
-  flutter_post_insta
 
