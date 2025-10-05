@@ -1,15 +1,9 @@
-platform :ios, '13.0'
+platform :ios, '12.0'
 
-# ignore all warnings from all pods
-inhibit_all_warnings!
-
-flutter_application_path = '../'
-load File.join(flutter_application_path, '.flutter-plugins-dependencies')
+# Prevent Cocoapods from embedding multiple copies of the same library
+use_frameworks!
+use_modular_headers!
 
 target 'Runner' do
-  use_frameworks!
-  use_modular_headers!
-
   flutter_install_all_ios_pods File.dirname(File.realpath(__FILE__))
 end
-
